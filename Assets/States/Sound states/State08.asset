@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d44c54d4f34f7314e920622469685f5e, type: 3}
-  m_Name: State01
+  m_Name: State08
   m_EditorClassIdentifier: 
-  Title: The human brain - senses
-  DataText: The Sounds of Physics program was developed by the pedagogical staff
-    at the Scientific Technological Center in Carasso Park in Be'er Sheva in collaboration
-    with the Southern District Music Supervisor.
-  image: {fileID: 0}
+  Title: amplitude
+  DataText: 
+  image: {fileID: 21300000, guid: e40203aff344ab549995d9851bcb8abd, type: 3}

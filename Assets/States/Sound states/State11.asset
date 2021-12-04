@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d44c54d4f34f7314e920622469685f5e, type: 3}
-  m_Name: State01
+  m_Name: State11
   m_EditorClassIdentifier: 
   Title: Sound
-  DataText: 'Sound and sound are created by the movement of waves in the air. These
-    waves are called "sound waves"
-
-
-    Sound waves are created when a particular
-    bone or body vibrates or when we make a particular sound or noise. This object
-    is called the "source of sound."'
-  image: {fileID: 21300000, guid: 53e717999ebd55c478d2918cc90ff456, type: 3}
+  DataText: Here is a scatter that includes terms we have learned in lessons so far.
+    Divide into groups of 4 students (or zoom rooms). Each student will find a term
+    within the bulk and explain it to his friends. This way we can learn whether
+    the terms we have learned are clear to us.
+  image: {fileID: 21300000, guid: 676b008e8aa4eec4da6298a623285e66, type: 3}
