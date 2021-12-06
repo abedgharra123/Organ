@@ -11,6 +11,8 @@ public class MainScript : MonoBehaviour
     }
     public void ExitButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+        SceneManager.LoadScene("MainScene");
     }
+
+    
 }

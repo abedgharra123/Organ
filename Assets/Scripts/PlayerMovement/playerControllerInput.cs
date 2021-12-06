@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.SceneManagement;
 
 public class playerControllerInput : MonoBehaviour
 {
@@ -20,7 +21,15 @@ public class playerControllerInput : MonoBehaviour
         Control = GetComponent<ThirdPersonUserControl>();
         Camera.main.transform.position = new Vector3(513,112,405);
     }
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.tag == "Games_Gate")
+            transform.position = new Vector3(365, 1, -60);
+        if (col.collider.tag == "Back_Gate")
+            transform.position = new Vector3(12 , 0, 16);
 
+
+    }
     // Update is called once per frame
     void Update()
     {

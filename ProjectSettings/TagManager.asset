@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - BrainSound
+  - Games_Gate
+  - Back_Gate
   layers:
   - Default
   - TransparentFX
