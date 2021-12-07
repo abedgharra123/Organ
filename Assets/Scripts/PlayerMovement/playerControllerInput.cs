@@ -14,7 +14,6 @@ public class playerControllerInput : MonoBehaviour
 
     protected float CameraAngle ;
     protected float CameraAngleSpeed = 0.2f;
-
     // Use this for initialization
     void Start()
     {
@@ -24,9 +23,9 @@ public class playerControllerInput : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         if (col.collider.tag == "Games_Gate")
-            transform.position = new Vector3(365, 1, -60);
+            transform.position = new Vector3(362, 0, -82);
         if (col.collider.tag == "Back_Gate")
-            transform.position = new Vector3(12 , 0, 16);
+            transform.position = new Vector3(3 , 1.11f, 4);
 
 
     }
