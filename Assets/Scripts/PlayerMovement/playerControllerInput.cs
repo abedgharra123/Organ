@@ -14,6 +14,8 @@ public class playerControllerInput : MonoBehaviour
 
     protected float CameraAngle ;
     protected float CameraAngleSpeed = 0.2f;
+    public AudioClip sound;
+    public AudioClip sound2;
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,11 @@ public class playerControllerInput : MonoBehaviour
             transform.position = new Vector3(362, 0, -82);
         if (col.collider.tag == "Back_Gate")
             transform.position = new Vector3(3 , 1.11f, 4);
+       // if (col.collider.tag == "start_pipe")
+          //  AudioSource.PlayClipAtPoint(sound, col.transform.position);
+        if (col.collider.tag == "start_pipe")
+            AudioSource.PlayClipAtPoint(sound2, col.transform.position);
+
 
 
     }

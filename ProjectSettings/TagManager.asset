@@ -12,6 +12,9 @@ TagManager:
   - Elephant
   - Bat
   - Human
+  - Fire
+  - start_pipe
+  - Organ_Field
   layers:
   - Default
   - TransparentFX
