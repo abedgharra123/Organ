@@ -9,12 +9,16 @@ public class PartsSpawner: MonoBehaviour
     private bool lock1=true;
     private int numberOfTiles = 15;
     private float Zspawn = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
         Instantiate(prefabs[1],Vector3.zero,Quaternion.identity);
         LastPart = Instantiate(prefabs[0],new Vector3(0, 0,Zspawn),Quaternion.identity);
         numberOfTiles--;
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Endless_Runner");
+        AudioManager.instance.Play("Beach");
     }
 
     // Update is called once per frame
@@ -36,4 +40,5 @@ public class PartsSpawner: MonoBehaviour
         LastPart = Instantiate(prefabs[index],new Vector3(0, 0, Zspawn+20f),Quaternion.identity);
         numberOfTiles--;
     }
+    
 }

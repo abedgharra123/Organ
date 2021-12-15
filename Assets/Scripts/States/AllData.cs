@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class AllData : MonoBehaviour
 {
     [SerializeField] Text Title;
@@ -23,7 +23,11 @@ public class AllData : MonoBehaviour
         index = 0;
     }
     public void NextState(){
-        if(index+1 >= states.Count) return;
+        if(index+1 >= states.Count){
+            
+            SceneManager.LoadScene("Endless_Runner");
+            return;
+        }
         index++;
         Title.text = states[index].GetTitle();
         TextData.text = states[index].GetDataText();

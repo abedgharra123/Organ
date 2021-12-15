@@ -15,6 +15,10 @@ TagManager:
   - Fire
   - start_pipe
   - Organ_Field
+  - Target
+  - 0
+  - 1
+  - 2
   layers:
   - Default
   - TransparentFX
@@ -51,4 +55,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: High
+    uniqueID: 3251887127
+    locked: 0
+  - name: New Layer
+    uniqueID: 2086336679
     locked: 0
