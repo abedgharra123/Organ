@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Endless_Runner.unity
     guid: 4c5109656907bde4db53c73e8afa45d7
+  - enabled: 1
+    path: Assets/Scenes/Loading_bar.unity
+    guid: 20a8e4fd514021041a5862be52ad08fa
   m_configObjects: {}

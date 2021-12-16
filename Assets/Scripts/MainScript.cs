@@ -7,7 +7,7 @@ public class MainScript : MonoBehaviour
 {
     
     public void StartButton(){
-        SceneManager.LoadScene("Game_Field");
+        SceneManager.LoadScene("Loading_bar");
     }
     public void ExitButton()
     {
