@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: String_Words_ar
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ar
+  m_SharedData: {fileID: 11400000, guid: 8ae0f6da180335d4dbc3f2f7b7e5ba1a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 75252862976
+    m_Localized: "\uFE90\uFECC\uFEE0\uFEDF\uFE8D \uFE83\uFEAA\uFE91\uFE8D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 574073049088
+    m_Localized: "\uFE95\uFE8D\uFEA9\uFE8D\uFEAA\uFECB\uFEFB\uFE8D\uFE8D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2349693898752
+    m_Localized: "\uFE95\uFEEE\uFEE0\uFED4\uFEDF\uFE8D \uFEAF\uFE8E\uFEEC\uFE9F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9935956709376
+    m_Localized: "\uFE9D\uFEED\uFEAE\uFEA7"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
