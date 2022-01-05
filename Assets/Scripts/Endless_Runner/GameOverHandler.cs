@@ -11,6 +11,6 @@ public class GameOverHandler : MonoBehaviour
     public void BackToLearning(){ SceneManager.LoadScene(1); }
 
     public void Awake(){
-        score.text = score.text + " : " + PlayerPrefs.GetInt("Score", 0);
+        score.text =  "Score: " + PlayerPrefs.GetInt("Score", 0);
     }
 }

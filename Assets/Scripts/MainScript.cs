@@ -13,7 +13,6 @@ public class MainScript : MonoBehaviour
     {
         AudioManager.instance.StopAll();
         AudioManager.instance.Play("Beach");
-        AudioManager.instance.Play("Main_Music");
         SceneManager.LoadScene("MainScene");
     }
     public void SettingsButton(){

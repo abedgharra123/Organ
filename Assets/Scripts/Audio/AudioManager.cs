@@ -24,7 +24,6 @@ public class AudioManager : MonoBehaviour
         }
         instance.StopAll();
         instance.Play("Beach");
-        instance.Play("Main_Music");
     }
     public void Play(string name){
         Sound s = Array.Find(sounds,s => s.name == name);
