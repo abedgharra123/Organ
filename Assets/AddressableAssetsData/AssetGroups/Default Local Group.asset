@@ -16,7 +16,15 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 20423ee66e7050d43b56c5e9d12ee121
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 5e9153edf14468d4b8abc97a6c176ae6
+    m_Address: Assets/Images/waves_tone.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a49713c471e52ef4da932f3ef1ab9462, type: 2}
   m_SchemaSet:
