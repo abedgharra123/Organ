@@ -16,11 +16,13 @@ public class playerControllerInput : MonoBehaviour
     protected float CameraAngleSpeed = 0.2f;
     public AudioClip sound;
     public AudioClip sound2;
+    private GameObject pipe;
     // Use this for initialization
     void Start()
     {
         Control = GetComponent<ThirdPersonUserControl>();
         Camera.main.transform.position = new Vector3(513,112,405);
+        
     }
     private void OnCollisionEnter(Collision col)
     {
@@ -28,8 +30,10 @@ public class playerControllerInput : MonoBehaviour
             transform.position = new Vector3(362, 0, -82);
         if (col.collider.tag == "Back_Gate")
             transform.position = new Vector3(3 , 1.11f, 4);
-       // if (col.collider.tag == "start_pipe")
-          //  AudioSource.PlayClipAtPoint(sound, col.transform.position);
+        if (col.collider.tag == "pipe_end")
+            Destroy(pipe);
+        // if (col.collider.tag == "start_pipe")
+        //  AudioSource.PlayClipAtPoint(sound, col.transform.position);
 
 
 
@@ -38,6 +42,7 @@ public class playerControllerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pipe = GameObject.FindGameObjectWithTag("pipe_end_2");
         Control.m_Jump = Button.Pressed;
         Control.Hinput = LeftJoystick.Horizontal;
         Control.Vinput = LeftJoystick.Vertical;

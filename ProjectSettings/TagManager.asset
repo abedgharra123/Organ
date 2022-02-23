@@ -19,6 +19,8 @@ TagManager:
   - 0
   - 1
   - 2
+  - pipe_end
+  - pipe_end_2
   layers:
   - Default
   - TransparentFX
