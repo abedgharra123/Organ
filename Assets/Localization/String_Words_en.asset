@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 8ae0f6da180335d4dbc3f2f7b7e5ba1a, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 75252862976
     m_Localized: Start
@@ -74,5 +75,20 @@ MonoBehaviour:
     m_Localized: Your score
     m_Metadata:
       m_Items: []
+  - m_Id: 22772844537536512
+    m_Localized: "Welcome to an educational game\n that talks about the process \nof
+      building the pipe organ,\n \"Developed by Sami Shimon \nCollege in  collaboration
+      with \nthe Carasso Science Park \nin Isreal - Be'er Sheva\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22774517834145792
+    m_Localized: "Welcome to Organ!\n\nlook back and have fun\n playing and learning"
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00606fa54de95000

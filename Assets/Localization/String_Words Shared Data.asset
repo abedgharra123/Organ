@@ -71,6 +71,14 @@ MonoBehaviour:
     m_Key: Your score
     m_Metadata:
       m_Items: []
+  - m_Id: 22772844537536512
+    m_Key: producers_wall_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22774517834145792
+    m_Key: Begining_text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
