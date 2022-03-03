@@ -27,7 +27,7 @@ public class playerControllerInput : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         if (col.collider.tag == "Games_Gate")
-            transform.position = new Vector3(362, 0, -82);
+            transform.position = new Vector3(214, 0,205);
         if (col.collider.tag == "Back_Gate")
             transform.position = new Vector3(3 , 1.11f, 4);
         if (col.collider.tag == "pipe_end")
