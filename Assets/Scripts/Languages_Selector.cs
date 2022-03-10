@@ -30,8 +30,10 @@ public class Languages_Selector : MonoBehaviour
         dropdown.onValueChanged.AddListener(LocaleSelected);
     }
 
+
     static void LocaleSelected(int index)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
     }
+
 }
