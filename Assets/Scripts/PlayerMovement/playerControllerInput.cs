@@ -17,12 +17,14 @@ public class playerControllerInput : MonoBehaviour
     public AudioClip sound;
     public AudioClip sound2;
     private GameObject pipe;
+
     // Use this for initialization
     void Start()
     {
         Control = GetComponent<ThirdPersonUserControl>();
         Camera.main.transform.position = new Vector3(513,112,405);
-        
+
+
     }
     private void OnCollisionEnter(Collision col)
     {
@@ -31,7 +33,10 @@ public class playerControllerInput : MonoBehaviour
         if (col.collider.tag == "Back_Gate")
             transform.position = new Vector3(3 , 1.11f, 4);
         if (col.collider.tag == "pipe_end")
+        {
+            transform.position = new Vector3(2.26555f, 0, 3.683381f);
             Destroy(pipe);
+        }
         // if (col.collider.tag == "start_pipe")
         //  AudioSource.PlayClipAtPoint(sound, col.transform.position);
 
