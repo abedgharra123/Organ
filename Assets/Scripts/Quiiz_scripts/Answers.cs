@@ -19,25 +19,32 @@ public class Answers : MonoBehaviour
 
         startColor = GetComponent<Image>().color;
     }
+
     
     public void Answer()
     {
         if (isCorrect)
         {
             GetComponent<Image>().color = Color.green;
-            Task.Delay(1000);
-            GetComponent<Image>().color = startColor;
+            StartCoroutine(Timedelay());
             Debug.Log("Correct Answer");
             quizManager.correct();
         }
         else
         {
             GetComponent<Image>().color = Color.red;
-            Task.Delay(1000);
-            GetComponent<Image>().color = startColor;
+            StartCoroutine(Timedelay());
             Debug.Log("Wrong Answer");
             quizManager.Wrong();
 
         }
+    }
+
+    IEnumerator Timedelay()
+    {
+
+        yield return new WaitForSeconds(0.6f);
+        GetComponent<Image>().color = startColor;
+
     }
 }
