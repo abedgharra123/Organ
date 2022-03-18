@@ -21,6 +21,8 @@ TagManager:
   - 2
   - pipe_end
   - pipe_end_2
+  - FxTemporaire
+  - History
   layers:
   - Default
   - TransparentFX

@@ -6,19 +6,17 @@ using UnityEngine.SceneManagement;
 public class AllData : MonoBehaviour
 {
     [SerializeField] Text Title;
-    [SerializeField] Text TextData; 
     [SerializeField] Image image;
-    [SerializeField] List<State> states;
-    [SerializeField] GameObject BrainScenes;
+    [SerializeField] GameObject StatesUI;
     [SerializeField] GameObject PlayerField;
-
-
+    private List<State> states;
+    [SerializeField] List<State> BrainStates;
+    [SerializeField] List<State> HistoryStates;
     private int index;
     // Start is called before the first frame update
     void Start()
     {
         Title.text = states[0].GetTitle();
-        TextData.text = states[0].GetDataText(); 
         image.sprite = states[0].GetImage();
         index = 0;
     }
@@ -30,19 +28,42 @@ public class AllData : MonoBehaviour
         }
         index++;
         Title.text = states[index].GetTitle();
-        TextData.text = states[index].GetDataText();
         image.sprite = states[index].GetImage();
     }
     public void PreviousState(){
         if (index <= 0) return;
         index--;
         Title.text = states[index].GetTitle();
-        TextData.text = states[index].GetDataText();
         image.sprite = states[index].GetImage();
     }
-    public void ExitBrainScenes(){
-        BrainScenes.SetActive(false);
+    public void ExitScenes(){
+        StatesUI.SetActive(false);
         PlayerField.SetActive(true);
+    }
+    void Update(){
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit raycastHit;
+            if (Physics.Raycast(raycast, out raycastHit)){
+                Debug.Log("Something Hit");
+                if (raycastHit.collider.CompareTag("BrainSound")){
+                    Debug.Log("BrainSound Hit");
+                    index = 0;
+                    PlayerField.SetActive(false);
+                    states = BrainStates;
+                    StatesUI.SetActive(true);
+
+                }
+                if (raycastHit.collider.CompareTag("History")){
+                    Debug.Log("History Hit");
+                    index = 0;
+                    PlayerField.SetActive(false);
+                    states = HistoryStates;
+                    StatesUI.SetActive(true);
+                }
+            }
+        }
     }
 
 
