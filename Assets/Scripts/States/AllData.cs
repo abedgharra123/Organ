@@ -49,17 +49,21 @@ public class AllData : MonoBehaviour
                 Debug.Log("Something Hit");
                 if (raycastHit.collider.CompareTag("BrainSound")){
                     Debug.Log("BrainSound Hit");
-                    index = 0;
                     PlayerField.SetActive(false);
                     states = BrainStates;
+                    Title.text = states[0].GetTitle();
+                    image.sprite = states[0].GetImage();
+                    index = 0;
                     StatesUI.SetActive(true);
 
                 }
                 if (raycastHit.collider.CompareTag("History")){
                     Debug.Log("History Hit");
-                    index = 0;
                     PlayerField.SetActive(false);
                     states = HistoryStates;
+                    Title.text = states[0].GetTitle();
+                    image.sprite = states[0].GetImage();
+                    index = 0;
                     StatesUI.SetActive(true);
                 }
             }
