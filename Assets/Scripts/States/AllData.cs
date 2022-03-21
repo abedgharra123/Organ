@@ -12,6 +12,7 @@ public class AllData : MonoBehaviour
     private List<State> states;
     [SerializeField] List<State> BrainStates;
     [SerializeField] List<State> HistoryStates;
+    [SerializeField] List<State> MathStates;
     private int index;
     // Start is called before the first frame update
     void Start()
