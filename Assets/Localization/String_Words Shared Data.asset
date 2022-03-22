@@ -79,6 +79,14 @@ MonoBehaviour:
     m_Key: Begining_text
     m_Metadata:
       m_Items: []
+  - m_Id: 30058413461123072
+    m_Key: Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30058564393152512
+    m_Key: Jump
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

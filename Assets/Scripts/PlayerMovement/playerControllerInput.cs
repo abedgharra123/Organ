@@ -16,25 +16,50 @@ public class playerControllerInput : MonoBehaviour
     protected float CameraAngleSpeed = 0.2f;
     public AudioClip sound;
     public AudioClip sound2;
-    private GameObject pipe;
+    public GameObject pipe;
+    public GameObject Education_terrain;
+    public GameObject Garden_Terrain;
+    public GameObject Map;
+    public GameObject Movment_info;
+    public GameObject Main_Canvas;
+
+
 
     // Use this for initialization
     void Start()
     {
         Control = GetComponent<ThirdPersonUserControl>();
         Camera.main.transform.position = new Vector3(513,112,405);
+        Main_Canvas.SetActive(false);
+        Education_terrain.SetActive(false);
+        Garden_Terrain.SetActive(false);
+        Map.SetActive(false);
 
 
     }
     private void OnCollisionEnter(Collision col)
     {
         if (col.collider.tag == "Games_Gate")
-            transform.position = new Vector3(214, 0,205);
+        {
+            Map.SetActive(false);
+            Education_terrain.SetActive(false);
+            Garden_Terrain.SetActive(true);
+            transform.position = new Vector3(247.3617f, -0.0004883409f, 0.8558963f);
+            
+        }
         if (col.collider.tag == "Back_Gate")
-            transform.position = new Vector3(3 , 1.11f, 4);
+        {
+            Garden_Terrain.SetActive(false);
+            Map.SetActive(true);
+            Education_terrain.SetActive(true);
+            transform.position = new Vector3(10.94437f, 2.686021f, 41.161f);
+
+        }
         if (col.collider.tag == "pipe_end")
         {
-            transform.position = new Vector3(2.26555f, 0, 3.683381f);
+            Map.SetActive(true);
+            Education_terrain.SetActive(true);
+            transform.position = new Vector3(10.73f, 2.686022f, -10.9f);
             Destroy(pipe);
         }
         // if (col.collider.tag == "start_pipe")
@@ -56,6 +81,13 @@ public class playerControllerInput : MonoBehaviour
 
         Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0, 3, 4);
         Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
+
+    }
+
+    public void start_game()
+    {
+        Movment_info.SetActive(false);
+        Main_Canvas.SetActive(true);
 
     }
 }
