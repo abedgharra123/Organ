@@ -87,6 +87,18 @@ MonoBehaviour:
     m_Key: Jump
     m_Metadata:
       m_Items: []
+  - m_Id: 30415047458861056
+    m_Key: Choosing_character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30415407044931584
+    m_Key: Male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30415504134680576
+    m_Key: female
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

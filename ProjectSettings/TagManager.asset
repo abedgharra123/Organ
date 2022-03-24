@@ -23,6 +23,12 @@ TagManager:
   - pipe_end_2
   - FxTemporaire
   - History
+  - Kol_Transform
+  - Math_Transform
+  - History_Transform
+  - Physics_Transform
+  - Correct_Answer
+  - Wrong_Answer
   layers:
   - Default
   - TransparentFX

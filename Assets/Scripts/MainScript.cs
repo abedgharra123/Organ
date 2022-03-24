@@ -19,5 +19,10 @@ public class MainScript : MonoBehaviour
         
     }
 
-    
+    public void Final_Exam()
+    {
+        SceneManager.LoadScene("Final_Exam_Game");
+    }
+
+
 }

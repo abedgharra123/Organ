@@ -94,6 +94,18 @@ MonoBehaviour:
     m_Localized: Jump
     m_Metadata:
       m_Items: []
+  - m_Id: 30415047458861056
+    m_Localized: Choose a player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30415407044931584
+    m_Localized: Male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30415504134680576
+    m_Localized: Female
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:

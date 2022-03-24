@@ -14,14 +14,17 @@ public class playerControllerInput : MonoBehaviour
 
     protected float CameraAngle ;
     protected float CameraAngleSpeed = 0.2f;
+    protected float CameraPosSpeed = 0.005f;
+    protected float CameraPosY;
+
     public AudioClip sound;
     public AudioClip sound2;
     public GameObject pipe;
     public GameObject Education_terrain;
     public GameObject Garden_Terrain;
     public GameObject Map;
-    public GameObject Movment_info;
-    public GameObject Main_Canvas;
+   
+
 
 
 
@@ -30,7 +33,6 @@ public class playerControllerInput : MonoBehaviour
     {
         Control = GetComponent<ThirdPersonUserControl>();
         Camera.main.transform.position = new Vector3(513,112,405);
-        Main_Canvas.SetActive(false);
         Education_terrain.SetActive(false);
         Garden_Terrain.SetActive(false);
         Map.SetActive(false);
@@ -78,16 +80,14 @@ public class playerControllerInput : MonoBehaviour
         Control.Vinput = LeftJoystick.Vertical;
 
         CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
+        CameraPosY = Mathf.Clamp(CameraPosY - TouchField.TouchDist.y * CameraPosSpeed, 0.5f, 5f);
 
-        Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0, 3, 4);
+        Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0, CameraPosY, 4);
         Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
 
     }
 
-    public void start_game()
-    {
-        Movment_info.SetActive(false);
-        Main_Canvas.SetActive(true);
+    
 
-    }
+   
 }
