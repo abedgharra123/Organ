@@ -11,6 +11,8 @@ public class Maps_Change : MonoBehaviour
     public GameObject Physics_Map;
     public GameObject Brocken_Heart;
     public GameObject Star;
+    public AudioClip[] sound;
+    public Material[] sky_Box;
 
     protected int final_kol_score;
     public Text score_txt;
@@ -43,13 +45,22 @@ public class Maps_Change : MonoBehaviour
         if (col.collider.tag == "Correct_Answer")
         {
             Star.SetActive(true);
+            AudioSource.PlayClipAtPoint(sound[0],col.transform.position);
             Invoke("Correct_Answer", 1);
+            Destroy(col.gameObject);
+
 
         }
         if (col.collider.tag == "Wrong_Answer")
         {
             Brocken_Heart.SetActive(true);
             Invoke("Wrong_Answer", 1.5f);
+            Destroy(col.gameObject);
+
+        }
+        if (col.collider.tag == "Destroy_Question")
+        {
+            Destroy(col.gameObject);
         }
 
 
@@ -62,19 +73,22 @@ public class Maps_Change : MonoBehaviour
     {
         History_Map.SetActive(true);
         transform.position = new Vector3(3, 10.92f, 52.75f);
+        RenderSettings.skybox = sky_Box[0];
         Torat_Kol_Map.SetActive(false);
     }
     public void History_Transform()
     {
-            Math_Map.SetActive(true);
-            transform.position = new Vector3(3, 21, 102.32f);
-            History_Map.SetActive(false);
+        Math_Map.SetActive(true);
+        transform.position = new Vector3(3, 21, 102.32f);
+        RenderSettings.skybox = sky_Box[1];
+        History_Map.SetActive(false);
         
     }
     public void Math_Transform()
     {
         Physics_Map.SetActive(true);
         transform.position = new Vector3(3, 30.947f, 152.468f);
+        RenderSettings.skybox = sky_Box[2];
         Math_Map.SetActive(false);
     }
 
