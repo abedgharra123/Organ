@@ -30,6 +30,9 @@ TagManager:
   - Correct_Answer
   - Wrong_Answer
   - Destroy_Question
+  - Heart_PickUp_Kol
+  - Heart_PickUp_History
+  - Heart_PickUp_Math
   layers:
   - Default
   - TransparentFX

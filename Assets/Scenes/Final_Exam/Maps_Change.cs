@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -10,15 +11,20 @@ public class Maps_Change : MonoBehaviour
     public GameObject Math_Map;
     public GameObject Physics_Map;
     public GameObject Brocken_Heart;
+    public GameObject Heart_PickUp;
     public GameObject Star;
     public AudioClip[] sound;
     public Material[] sky_Box;
-
+    //3 hearts
+    protected int heart_amount;
+    public GameObject[] Hearts;
     protected int final_kol_score;
     public Text score_txt;
 
     void Start()
     {
+        heart_amount = 3;
+        Heart_PickUp.SetActive(false);
         Brocken_Heart.SetActive(false);
         Star.SetActive(false);
         History_Map.SetActive(false);
@@ -54,6 +60,12 @@ public class Maps_Change : MonoBehaviour
         if (col.collider.tag == "Wrong_Answer")
         {
             Brocken_Heart.SetActive(true);
+            AudioSource.PlayClipAtPoint(sound[1], col.transform.position);
+            if (heart_amount > 0)
+            {
+                heart_amount--;
+                Hearts[heart_amount].SetActive(false);
+            }
             Invoke("Wrong_Answer", 1.5f);
             Destroy(col.gameObject);
 
@@ -61,6 +73,19 @@ public class Maps_Change : MonoBehaviour
         if (col.collider.tag == "Destroy_Question")
         {
             Destroy(col.gameObject);
+        }
+
+        if (col.collider.tag == "Heart_PickUp_Kol" || col.collider.tag == "Heart_PickUp_History" || col.collider.tag == "Heart_PickUp_Math")
+        {
+            AudioSource.PlayClipAtPoint(sound[0], col.transform.position);
+            if (heart_amount < 3)
+            {
+                heart_amount++;
+                Hearts[heart_amount-1].SetActive(true);
+            }
+            Heart_PickUp.SetActive(true);
+            Invoke("Increase_Life", 1);
+            Destroy(col.gameObject);    
         }
 
 
@@ -101,6 +126,10 @@ public class Maps_Change : MonoBehaviour
     public void Wrong_Answer()
     {
             Brocken_Heart.SetActive(false);
+    }
+    public void Increase_Life()
+    {
+            Heart_PickUp.SetActive(false);
     }
 
 }
