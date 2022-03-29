@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final_Exam/Final_Exam_Game.unity
     guid: 6131389eb71f1b34095aa7239effd512
+  - enabled: 1
+    path: Assets/Scenes/History_Questions/History_Questions.unity
+    guid: f24be3ad90a509e49b53a8d4a0964ec3
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c17b5e83cee4c1c45b0d840bf1ec6866, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: fb9ac0d9d0aa7024482d23e7ff8ad605, type: 2}

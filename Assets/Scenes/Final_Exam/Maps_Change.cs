@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Maps_Change : MonoBehaviour
 {
@@ -47,6 +48,10 @@ public class Maps_Change : MonoBehaviour
         {
             Invoke("Math_Transform", 1);
 
+        }
+        if (col.collider.tag == "Physics_Transform")
+        {
+            Invoke("Physics_Transform", 1);
         }
         if (col.collider.tag == "Correct_Answer")
         {
@@ -115,6 +120,12 @@ public class Maps_Change : MonoBehaviour
         transform.position = new Vector3(3, 30.947f, 152.468f);
         RenderSettings.skybox = sky_Box[2];
         Math_Map.SetActive(false);
+    }
+
+    public void Physics_Transform()
+    {
+        SceneManager.LoadScene("History_Questions");
+
     }
 
     public void Correct_Answer()
