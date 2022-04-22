@@ -13,18 +13,24 @@ public class AllData : MonoBehaviour
     [SerializeField] List<State> BrainStates;
     [SerializeField] List<State> HistoryStates;
     [SerializeField] List<State> MathStates;
+    [SerializeField] GameObject Boy;
+    [SerializeField] GameObject Girl;
     private int index;
     // Start is called before the first frame update
     void Start()
     {
-        Title.text = states[0].GetTitle();
-        image.sprite = states[0].GetImage();
+        //Title.text = states[0].GetTitle();
+        //image.sprite = states[0].GetImage();
         index = 0;
     }
     public void NextState(){
         if(index+1 >= states.Count){
-            
-            SceneManager.LoadScene("Endless_Runner");
+
+            playerControllerInput.LastPosition = PlayerPrefs.GetInt("IsCharacterPicked",0) == 1 ?  Boy.transform.position : Girl.transform.position;
+            if(states == BrainStates)
+                SceneManager.LoadScene("Endless_Runner");
+            if(states == HistoryStates)
+                SceneManager.LoadScene(6);
             return;
         }
         index++;

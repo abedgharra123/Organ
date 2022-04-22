@@ -22,22 +22,22 @@ public class PartsSpawner: MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(!LastPart) return;
-        if(numberOfTiles <= 0 && lock1 && LastPart.transform.position.z <= 20f){
+        if(numberOfTiles <= 0 && lock1 && LastPart.transform.position.z <= 30f){
             lock1=false;
             SpawnePart(2);
 
         }
-        if (LastPart.transform.position.z <= 20f && numberOfTiles > 0){
+        if (LastPart.transform.position.z <= 30f && numberOfTiles > 0){
             SpawnePart(0);
         }
         if(!lock1 && LastPart.transform.position.z <= 0) LastPart.GetComponent<Part>().Speed = 0;
         
     }
     private void SpawnePart(int index){
-        LastPart = Instantiate(prefabs[index],new Vector3(0, 0, Zspawn+20f),Quaternion.identity);
+        LastPart = Instantiate(prefabs[index],new Vector3(0, 0, Zspawn+30f),Quaternion.identity);
         numberOfTiles--;
     }
     

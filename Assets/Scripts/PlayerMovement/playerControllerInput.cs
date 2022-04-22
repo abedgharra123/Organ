@@ -16,28 +16,16 @@ public class playerControllerInput : MonoBehaviour
     protected float CameraAngleSpeed = 0.2f;
     protected float CameraPosSpeed = 0.005f;
     protected float CameraPosY;
-
-    public AudioClip sound;
-    public AudioClip sound2;
     public GameObject pipe;
     public GameObject Education_terrain;
     public GameObject Garden_Terrain;
     public GameObject Map;
+    public static Vector3 LastPosition = new Vector3(11,4,-13);
    
-
-
-
-
     // Use this for initialization
     void Start()
     {
         Control = GetComponent<ThirdPersonUserControl>();
-        Camera.main.transform.position = new Vector3(513,112,405);
-        Education_terrain.SetActive(false);
-        Garden_Terrain.SetActive(false);
-        Map.SetActive(false);
-
-
     }
     private void OnCollisionEnter(Collision col)
     {
@@ -74,7 +62,6 @@ public class playerControllerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pipe = GameObject.FindGameObjectWithTag("pipe_end_2");
         Control.m_Jump = Button.Pressed;
         Control.Hinput = LeftJoystick.Horizontal;
         Control.Vinput = LeftJoystick.Vertical;

@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4988946425733770269}
   - component: {fileID: 2849888081577890562}
+  - component: {fileID: 7704261728158380676}
   m_Layer: 0
   m_Name: RoadPart1
   m_TagString: Untagged
@@ -236,7 +237,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889fb60eb6d2eea4db6fac5d34effa08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: -0.05
+  Speed: -7
+  images: []
+  Target: {fileID: 0}
+--- !u!54 &7704261728158380676
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988946425733770268}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 118
+  m_CollisionDetection: 0
 --- !u!1 &6506017924009788334
 GameObject:
   m_ObjectHideFlags: 0

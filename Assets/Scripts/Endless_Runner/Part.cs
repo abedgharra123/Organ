@@ -5,7 +5,7 @@ using UnityEngine;
 public class Part : MonoBehaviour
 {
     private Vector3 Direction;
-    [SerializeField] public float Speed = -1.5f;
+    public float Speed;
     [SerializeField] Sprite[] images;
     [SerializeField]  SpriteRenderer Target;
 
@@ -69,7 +69,7 @@ public class Part : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Direction;
+        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
 }
