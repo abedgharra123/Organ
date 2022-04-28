@@ -21416,7 +21416,7 @@ MonoBehaviour:
   - {fileID: 1179821402}
   - {fileID: 750539453}
   - {fileID: 18239890}
-  Playey_Movenment: {fileID: 0}
+  Playey_Movenment: {fileID: 1972479977}
 --- !u!1 &1461286212
 GameObject:
   m_ObjectHideFlags: 0
