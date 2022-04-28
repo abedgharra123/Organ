@@ -7,10 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Maps_Change : MonoBehaviour
 {
-    public GameObject Torat_Kol_Map;
     public GameObject History_Map;
     public GameObject Math_Map;
-    public GameObject Physics_Map;
     public GameObject Brocken_Heart;
     public GameObject Heart_PickUp;
     public GameObject Star;
@@ -19,27 +17,30 @@ public class Maps_Change : MonoBehaviour
     //3 hearts
     protected int heart_amount;
     public GameObject[] Hearts;
-    protected int final_kol_score;
-    public Text score_txt;
+    protected int Count_question;
+    public GameObject[] Questions;
+    public GameObject Restart_Game_Panel;
+    public GameObject Movenment_btns;
+    public GameObject Game_Player;
 
     void Start()
     {
+        for (int i = 1; i < Questions.Length; i++)
+        {
+            Questions[i].SetActive(false);
+        }
+        Restart_Game_Panel.SetActive(false);
         heart_amount = 3;
         Heart_PickUp.SetActive(false);
         Brocken_Heart.SetActive(false);
         Star.SetActive(false);
-        History_Map.SetActive(false);
         Math_Map.SetActive(false);
-        Physics_Map.SetActive(false);
-        final_kol_score = 0;
+        Count_question = 0;
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.collider.tag == "Kol_Transform")
-        {
-            Invoke("Kol_Transform", 1);
-        }
+        
         if (col.collider.tag == "History_Transform")
         {
             Invoke("History_Transform", 1);
@@ -49,10 +50,7 @@ public class Maps_Change : MonoBehaviour
             Invoke("Math_Transform", 1);
 
         }
-        if (col.collider.tag == "Physics_Transform")
-        {
-            Invoke("Physics_Transform", 1);
-        }
+        
         if (col.collider.tag == "Correct_Answer")
         {
             Star.SetActive(true);
@@ -99,13 +97,7 @@ public class Maps_Change : MonoBehaviour
 
     }
 
-    public void Kol_Transform()
-    {
-        History_Map.SetActive(true);
-        transform.position = new Vector3(3, 10.92f, 52.75f);
-        RenderSettings.skybox = sky_Box[0];
-        Torat_Kol_Map.SetActive(false);
-    }
+    
     public void History_Transform()
     {
         Math_Map.SetActive(true);
@@ -114,33 +106,33 @@ public class Maps_Change : MonoBehaviour
         History_Map.SetActive(false);
         
     }
+    
     public void Math_Transform()
     {
-        Physics_Map.SetActive(true);
-        transform.position = new Vector3(3, 30.947f, 152.468f);
-        RenderSettings.skybox = sky_Box[2];
-        Math_Map.SetActive(false);
-    }
-
-    public void Physics_Transform()
-    {
-        SceneManager.LoadScene("History_Questions");
+        SceneManager.LoadScene("Loading_bar");
 
     }
 
     public void Correct_Answer()
     {
         Star.SetActive(false);
-        final_kol_score++;
-        score_txt.text = "" + final_kol_score;
+        Questions[++Count_question].SetActive(true);
     }
     public void Wrong_Answer()
     {
-            Brocken_Heart.SetActive(false);
+        Brocken_Heart.SetActive(false);
+        Questions[++Count_question].SetActive(true);
+        if (heart_amount == 0)
+        {
+            Movenment_btns.SetActive(false);
+            Game_Player.SetActive(false);
+            Restart_Game_Panel.SetActive(true);
+        }
     }
     public void Increase_Life()
     {
             Heart_PickUp.SetActive(false);
     }
+
 
 }

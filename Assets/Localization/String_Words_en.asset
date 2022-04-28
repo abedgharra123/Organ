@@ -18,6 +18,7 @@ MonoBehaviour:
   m_Metadata:
     m_Items:
     - id: 0
+    - id: 1
   m_TableData:
   - m_Id: 75252862976
     m_Localized: Start
@@ -60,9 +61,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1768596349620224
-    m_Localized: physics
+    m_Localized: Music
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 1
   - m_Id: 1785065938587648
     m_Localized: Play again
     m_Metadata:
@@ -99,11 +101,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30415407044931584
-    m_Localized: Male
+    m_Localized: Yitzak
     m_Metadata:
       m_Items: []
   - m_Id: 30415504134680576
-    m_Localized: Female
+    m_Localized: Remy
     m_Metadata:
       m_Items: []
   references:
@@ -112,3 +114,7 @@ MonoBehaviour:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries: 00606fa54de95000
+    00000001:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00902b6d87480600
