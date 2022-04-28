@@ -121,7 +121,10 @@ public class Maps_Change : MonoBehaviour
     public void Wrong_Answer()
     {
         Brocken_Heart.SetActive(false);
-        Questions[++Count_question].SetActive(true);
+        
+        if(Count_question+1 != Questions.Length)
+            Questions[++Count_question].SetActive(true);
+        
         if (heart_amount == 0)
         {
             Movenment_btns.SetActive(false);
