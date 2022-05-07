@@ -33,6 +33,7 @@ TagManager:
   - Heart_PickUp_Kol
   - Heart_PickUp_History
   - Heart_PickUp_Math
+  - Math
   layers:
   - Default
   - TransparentFX

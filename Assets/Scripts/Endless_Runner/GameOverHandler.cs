@@ -12,5 +12,9 @@ public class GameOverHandler : MonoBehaviour
 
     public void Awake(){
         score.text =  "Score: " + PlayerPrefs.GetInt("Score", 0);
+        if(PlayerPrefs.GetInt("Score", 0) > PlayerPrefs.GetInt("Score_1", 0)){
+            ScoreHandler.SetScore(1,PlayerPrefs.GetInt("Score", 0));
+            ScoreHandler.RecalculateTotalScore();
+        }
     }
 }

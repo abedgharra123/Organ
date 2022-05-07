@@ -17,11 +17,12 @@ public class AllData : MonoBehaviour
     [SerializeField] GameObject Girl;
     [SerializeField] UnityEngine.Video.VideoPlayer Clip;
     private int index;
-    // Start is called before the first frame update
+    [SerializeField] GameObject YouTube;
 
     enum StatesType{
         BrainStates,
         History,
+        Math,
     }
     void Start()
     {
@@ -40,12 +41,24 @@ public class AllData : MonoBehaviour
             return;
         }
         index++;
+        if(states[index].GetURL() != null && states[index].GetURL() != "" && states[index].GetURL() != string.Empty){
+            YouTube.SetActive(true);
+            YouTube.GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()); });
+        } else{
+            YouTube.SetActive(false);
+        }
         Title.text = states[index].GetTitle();
         image.sprite = states[index].GetImage();
     }
     public void PreviousState(){
         if (index <= 0) return;
         index--;
+        if(states[index].GetURL() != null && states[index].GetURL() != "" && states[index].GetURL() != string.Empty){
+            YouTube.SetActive(true);
+            YouTube.GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()); });
+        } else{
+            YouTube.SetActive(false);
+        }
         Title.text = states[index].GetTitle();
         image.sprite = states[index].GetImage();
     }
@@ -67,6 +80,9 @@ public class AllData : MonoBehaviour
                 if (raycastHit.collider.CompareTag("History")){
                     OnCharacterClick(StatesType.History);
                 }
+                if (raycastHit.collider.CompareTag("Math")){
+                    OnCharacterClick(StatesType.Math);
+                }
             }
         }
     }
@@ -81,6 +97,10 @@ public class AllData : MonoBehaviour
             case StatesType.History:
             Debug.Log("History charachter");
             states = HistoryStates;
+            break;
+            case StatesType.Math:
+            Debug.Log("Math charachter");
+            states = MathStates;
             break;
         }
         PlayerField.SetActive(false);

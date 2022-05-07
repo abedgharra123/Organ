@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class State : ScriptableObject
 {
    [SerializeField] string Title;
-
-   [SerializeField] Sprite image; 
-
+   [SerializeField] Sprite image;
+   [SerializeField] string url;
    public string GetTitle(){return Title;}
    public Sprite GetImage(){return image;}
+   public string GetURL(){return url;}
 }
