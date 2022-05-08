@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ScoreHandler
 {
-    public static int Score_1 {get; private set;} // first game, BrainSound game
-    public static int Score_2 {get; private set;} // second game, History game
+    public static int Score_1 {get; set;} // first game, BrainSound game
+    public static int Score_2 {get; set;} // second game, History game
     public static int Score_3 {get; private set;} 
     public static int Score_4 {get; private set;}
     public static int Total_Score {get; private set;}

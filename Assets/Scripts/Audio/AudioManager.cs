@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     private void Awake() {
-       // PlayerPrefs.SetInt("IsCharacterPicked", 0);
+        //PlayerPrefs.SetInt("IsCharacterPicked", 0);
         DontDestroyOnLoad(gameObject);
         if (instance == null) instance = this;
         else {

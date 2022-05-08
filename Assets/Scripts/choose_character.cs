@@ -10,6 +10,8 @@ public class choose_character : MonoBehaviour
     public GameObject Girls_Player;
     public GameObject Boys_Player;
     public GameObject pipe;
+    public GameObject Exams_Panel;
+
     public void Girl_choose()
     {
         pipe.SetActive(true);
@@ -17,6 +19,8 @@ public class choose_character : MonoBehaviour
         Character_Choose.SetActive(false);
         Girls_Player.SetActive(true);
         Movment_info.SetActive(true);
+        Exams_Panel.SetActive(false);
+
     }
     public void Boy_choose()
     {
@@ -25,12 +29,15 @@ public class choose_character : MonoBehaviour
         Character_Choose.SetActive(false);
         Boys_Player.SetActive(true);
         Movment_info.SetActive(true);
+        Exams_Panel.SetActive(false);
+
     }
 
     public void start_game()
     {
         Movment_info.SetActive(false);
         Main_Canvas.SetActive(true);
+        Exams_Panel.SetActive(false);
 
     }
 }

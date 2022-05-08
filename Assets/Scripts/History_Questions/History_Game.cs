@@ -16,6 +16,7 @@ public class History_Game : MonoBehaviour
     public int history_score;
     public Text score_txt;
     public GameObject Game_end_Panel;
+    /*[0]-gold_cup [1]-silver_cup [2]-red_cup*/
     public GameObject[] Trophies;
     public GameObject Playey_Movenment;
 
@@ -93,28 +94,33 @@ public class History_Game : MonoBehaviour
    
     public void Game_End_Panel()
     {
+        if(history_score > PlayerPrefs. GetInt("Score_2", 0))
+            PlayerPrefs.SetInt("Score_2", history_score);
         History_Levels[level_num].SetActive(false);
         Playey_Movenment.SetActive(false);
-        if (history_score > 85)
+        if (PlayerPrefs.GetInt("Score_2", 0) > 85)
         {
+            ScoreHandler.Score_2= PlayerPrefs.GetInt("Score_2", 0);
             score_txt.color = Color.green;
-            score_txt.text = "" +history_score+"%";
+            score_txt.text = "" + PlayerPrefs.GetInt("Score_2", 0) + "%";
             Trophies[0].SetActive(true);
             Trophies[1].SetActive(false);
             Trophies[2].SetActive(false);
         }
-        else if (history_score > 70)
+        else if (PlayerPrefs.GetInt("Score_2", 0) > 70)
         {
+            ScoreHandler.Score_2 = PlayerPrefs.GetInt("Score_2", 0);
             score_txt.color = Color.yellow;
-            score_txt.text = "" + history_score + "%";
+            score_txt.text = "" + PlayerPrefs.GetInt("Score_2", 0) + "%";
             Trophies[1].SetActive(true);
             Trophies[0].SetActive(false);
             Trophies[2].SetActive(false);
         }
         else
         {
+            ScoreHandler.Score_2 = PlayerPrefs.GetInt("Score_2", 0);
             score_txt.color = Color.red;
-            score_txt.text = "" +history_score+"%";
+            score_txt.text = "" + PlayerPrefs.GetInt("Score_2", 0) + "%";
             Trophies[2].SetActive(true);
             Trophies[0].SetActive(false);
             Trophies[1].SetActive(false);
