@@ -49,7 +49,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1759300907929600
-    m_Localized: Math
+    m_Localized: Pythagoras
     m_Metadata:
       m_Items: []
   - m_Id: 1759428691595264
@@ -61,7 +61,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1768596349620224
-    m_Localized: Music
+    m_Localized: Johann Sebastian Bach
     m_Metadata:
       m_Items:
       - id: 1
@@ -114,6 +114,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 47078419688370176
     m_Localized: Final exam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48124712862920704
+    m_Localized: Are you sure you want to delete all data?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48128554803441664
+    m_Localized: Clear Data
     m_Metadata:
       m_Items: []
   references:

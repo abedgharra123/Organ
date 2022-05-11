@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainScript : MonoBehaviour
 {
     public GameObject Exams_Panel;
+    public GameObject Clear_Data_panel;
+    public GameObject Setting_Panel;
     public void StartButton(){
         SceneManager.LoadScene("Loading_bar");
     }
@@ -15,8 +17,22 @@ public class MainScript : MonoBehaviour
         AudioManager.instance.Play("Beach");
         SceneManager.LoadScene("MainScene");
     }
-    public void SettingsButton(){
-        
+
+    public void Delete_Data_Button(){
+        PlayerPrefs.DeleteAll();
+        close_delete_data_panel();
+    }
+    public void close_delete_data_panel(){
+        Clear_Data_panel.SetActive(false);
+    }
+    public void open_delete_data_panel(){
+        Clear_Data_panel.SetActive(true);
+    }
+    public void open_Setting_panel(){
+        Setting_Panel.SetActive(true);
+    }
+    public void Close_Setting_panel(){
+        Setting_Panel.SetActive(false);
     }
 
     /*Final game Func transform*/

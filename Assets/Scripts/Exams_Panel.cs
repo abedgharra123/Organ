@@ -20,21 +20,22 @@ public class Exams_Panel : MonoBehaviour
 
     public void Acoustics_result()
     {
-        if (ScoreHandler.Score_1 > 12)
+        int score = ScoreHandler.GetScore(1);
+        if (score > 12)
         {
             acoustics_exam[3].SetActive(true);
             acoustics_exam[1].SetActive(false);
             acoustics_exam[2].SetActive(false);
             acoustics_exam[0].SetActive(false);
         }
-        else if (ScoreHandler.Score_1 > 9 )
+        else if (score > 9)
         {
             acoustics_exam[2].SetActive(true);
             acoustics_exam[1].SetActive(false);
             acoustics_exam[0].SetActive(false);
             acoustics_exam[3].SetActive(false);
         }
-        else if (ScoreHandler.Score_1 > 0)
+        else if (score > 0)
         {
             acoustics_exam[1].SetActive(true);
             acoustics_exam[0].SetActive(false);
@@ -51,21 +52,22 @@ public class Exams_Panel : MonoBehaviour
         }
     }public void History_result()
     {
-        if (ScoreHandler.Score_2 > 85)
+        int score = ScoreHandler.GetScore(2);
+        if (score > 85)
         {
             history_exam[3].SetActive(true);
             history_exam[1].SetActive(false);
             history_exam[2].SetActive(false);
             history_exam[0].SetActive(false);
         }
-        else if (ScoreHandler.Score_2 > 70)
+        else if (score > 70)
         {
             history_exam[2].SetActive(true);
             history_exam[1].SetActive(false);
             history_exam[0].SetActive(false);
             history_exam[3].SetActive(false);
         }
-        else if (ScoreHandler.Score_2 > 0)
+        else if (score > 0)
         {
             history_exam[1].SetActive(true);
             history_exam[0].SetActive(false);
@@ -84,7 +86,7 @@ public class Exams_Panel : MonoBehaviour
 
     public void Final_exam_panel()
     {
-        if (ScoreHandler.Score_1 > 12 && ScoreHandler.Score_2 > 85)
+        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85)
         {
             Final_exam.SetActive(true);
         }
