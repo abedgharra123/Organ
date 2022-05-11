@@ -23,5 +23,9 @@ public class ScoreHandler
     public static void SetScore(int index,int value){
         PlayerPrefs.SetInt($"Score_{index}",value);
     }
+    public static int GetScore(int index){
+        return PlayerPrefs.GetInt($"Score_{index}",0);
+    }
+
     public static void RecalculateTotalScore(){Total_Score = Score_1 + Score_2 + Score_3 + Score_4; }
 }

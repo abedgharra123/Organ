@@ -16,61 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 2295c7bdd0552884ba13ccd0667c316c
-  m_SerializeEntries:
-  - m_GUID: 01214a793ce41d04f934edabaec82b05
-    m_Address: History_Questions_ar
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 2e54e834eed3c2243bda46d10c3c9f30
-    m_Address: String_Words_ar
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 58eb75b70b02683499c0c0c195bbb7bb
-    m_Address: String_Words_he
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-he
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 607c2215fad5a6e4e8b7be6ac034c3ad
-    m_Address: String_Words_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9bfd1d242ce22d940a1e3893a55ab9fa
-    m_Address: History_Questions_he
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-he
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: e13cb93084e300644b0280d2bf6d8207
-    m_Address: History_Questions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a49713c471e52ef4da932f3ef1ab9462, type: 2}
   m_SchemaSet:
