@@ -124,6 +124,10 @@ MonoBehaviour:
     m_Localized: Clear Data
     m_Metadata:
       m_Items: []
+  - m_Id: 48233076829761536
+    m_Localized: Get Out
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:

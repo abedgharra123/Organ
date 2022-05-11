@@ -8,8 +8,17 @@ public class MainScript : MonoBehaviour
     public GameObject Exams_Panel;
     public GameObject Clear_Data_panel;
     public GameObject Setting_Panel;
+    public GameObject Exit_Panel;
     public void StartButton(){
         SceneManager.LoadScene("Loading_bar");
+    }
+
+    public void Open_exit_Panel()
+    {
+        Exit_Panel.SetActive(true);
+    }public void Close_exit_Panel()
+    {
+        Exit_Panel.SetActive(false);
     }
     public void ExitButton()
     {

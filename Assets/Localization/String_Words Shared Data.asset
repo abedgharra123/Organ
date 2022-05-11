@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Key: clear data
     m_Metadata:
       m_Items: []
+  - m_Id: 48233076829761536
+    m_Key: Get Out
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

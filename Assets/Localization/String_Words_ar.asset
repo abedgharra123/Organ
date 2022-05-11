@@ -133,5 +133,9 @@ MonoBehaviour:
     m_Localized: "\uFE95\uFE8E\uFEE7\uFE8E\uFEF4\uFE92\uFEDF\uFE8D \uFEA2\uFEB4\uFEE3\uFE8D"
     m_Metadata:
       m_Items: []
+  - m_Id: 48233076829761536
+    m_Localized: "\uFE94\uFE92\uFECC\uFEE0\uFEDF\uFE8D \uFEE6\uFEE3 \uFE9D\uFEED\uFEAE\uFEA8\uFEDF\uFE8D"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
