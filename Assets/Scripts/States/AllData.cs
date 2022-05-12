@@ -101,6 +101,7 @@ public class AllData : MonoBehaviour
             case StatesType.Math:
             Debug.Log("Math charachter");
             states = MathStates;
+            PlayerPrefs.SetInt("Pythagoras", 1);
             break;
         }
         PlayerField.SetActive(false);
