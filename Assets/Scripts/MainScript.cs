@@ -47,6 +47,7 @@ public class MainScript : MonoBehaviour
     /*Final game Func transform*/
     public void Final_Exam()
     {
+        AudioManager.instance.Play("Final_Game");
         SceneManager.LoadScene("Final_Exam_Game");
     }
     

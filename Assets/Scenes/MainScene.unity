@@ -870,6 +870,18 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - clip: {fileID: 8300000, guid: cafe941e0b279ca47a843c354d9bdcb1, type: 3}
+    name: Star_Field
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - clip: {fileID: 8300000, guid: 9f408280938788c4aa5997a79d05b6b1, type: 3}
+    name: Final_Game
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
 --- !u!4 &270583493
 Transform:
   m_ObjectHideFlags: 0

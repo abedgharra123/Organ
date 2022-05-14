@@ -16,16 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 4bd41f808f5a3a749a9f498764cc6055
-  m_SerializeEntries:
-  - m_GUID: 638c9e1ea8ae1df448495f627333b723
-    m_Address: arabic_image_flag
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar
-    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a49713c471e52ef4da932f3ef1ab9462, type: 2}
   m_SchemaSet:

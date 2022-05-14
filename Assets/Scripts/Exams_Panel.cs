@@ -86,7 +86,7 @@ public class Exams_Panel : MonoBehaviour
 
     public void Final_exam_panel()
     {
-        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85)
+        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85 && PlayerPrefs.GetInt("Pythagoras", 0) ==1 && PlayerPrefs.GetInt("Johann", 0)==1)
         {
             Final_exam.SetActive(true);
         }
