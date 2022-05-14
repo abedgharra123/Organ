@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class AllData : MonoBehaviour
 {
-    [SerializeField] Text Title;
     [SerializeField] Image image;
     [SerializeField] GameObject StatesUI;
     [SerializeField] GameObject PlayerField;
@@ -13,16 +12,18 @@ public class AllData : MonoBehaviour
     [SerializeField] List<State> BrainStates;
     [SerializeField] List<State> HistoryStates;
     [SerializeField] List<State> MathStates;
+    [SerializeField] List<State> JohannStates;
     [SerializeField] GameObject Boy;
     [SerializeField] GameObject Girl;
     [SerializeField] UnityEngine.Video.VideoPlayer Clip;
     private int index;
-    [SerializeField] GameObject YouTube;
+    [SerializeField] GameObject[] YouTube;
 
     enum StatesType{
         BrainStates,
         History,
         Math,
+        Johann
     }
     void Start()
     {
@@ -41,25 +42,13 @@ public class AllData : MonoBehaviour
             return;
         }
         index++;
-        if(states[index].GetURL() != null && states[index].GetURL() != "" && states[index].GetURL() != string.Empty){
-            YouTube.SetActive(true);
-            YouTube.GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()); });
-        } else{
-            YouTube.SetActive(false);
-        }
-        Title.text = states[index].GetTitle();
+        YouTubeHandler();
         image.sprite = states[index].GetImage();
     }
     public void PreviousState(){
         if (index <= 0) return;
         index--;
-        if(states[index].GetURL() != null && states[index].GetURL() != "" && states[index].GetURL() != string.Empty){
-            YouTube.SetActive(true);
-            YouTube.GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()); });
-        } else{
-            YouTube.SetActive(false);
-        }
-        Title.text = states[index].GetTitle();
+        YouTubeHandler();
         image.sprite = states[index].GetImage();
     }
     public void ExitScenes(){
@@ -83,12 +72,18 @@ public class AllData : MonoBehaviour
                 if (raycastHit.collider.CompareTag("Math")){
                     OnCharacterClick(StatesType.Math);
                 }
+                if (raycastHit.collider.CompareTag("Johann")){
+                    OnCharacterClick(StatesType.Johann);
+                }
             }
         }
     }
 
     private void OnCharacterClick(StatesType type){
         AudioManager.instance.Play("Click");
+        YouTube[0].SetActive(false);
+        YouTube[1].SetActive(false);
+        YouTube[2].SetActive(false);
         switch(type){
             case StatesType.BrainStates:
             states = BrainStates;
@@ -103,16 +98,47 @@ public class AllData : MonoBehaviour
             states = MathStates;
             PlayerPrefs.SetInt("Pythagoras", 1);
             break;
+            case StatesType.Johann:
+            Debug.Log("Johann charachter");
+            states = JohannStates;
+            PlayerPrefs.SetInt("Johann", 1);
+            break;
         }
         PlayerField.SetActive(false);
-        Title.text = states[0].GetTitle();
         image.sprite = states[0].GetImage();
         index = 0;
         StatesUI.SetActive(true);
         Clip.Pause();
     }
 
+    private void YouTubeHandler(){
+        YouTube[0].SetActive(false);
+        YouTube[1].SetActive(false);
+        YouTube[2].SetActive(false);
+        if(states[index].GetURL() == null) return;
+        if(states[index].GetURL().Length > 0){
+            if( states[index].GetURL().Length == 3){
+                YouTube[0].SetActive(true);
+                YouTube[0].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
 
+                YouTube[1].SetActive(true);
+                YouTube[1].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[1]); });
 
+                YouTube[2].SetActive(true);
+                YouTube[2].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[2]); });
+            }
+            else if(states[index].GetURL().Length == 2){
+                YouTube[0].SetActive(true);
+                YouTube[0].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
 
+                YouTube[2].SetActive(true);
+                YouTube[2].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[1]); });
+            }
+            else if(states[index].GetURL() != null && states[index].GetURL()[0] != "" && states[index].GetURL()[0] != string.Empty){
+                YouTube[1].SetActive(true);
+                YouTube[1].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
+            } 
+        }
+    }
 }
+

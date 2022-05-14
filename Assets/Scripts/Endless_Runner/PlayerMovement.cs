@@ -11,10 +11,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] TMP_Text tScore;  
     [SerializeField] GameObject gameOverHander;
     [SerializeField] GameObject touchScreen;
+    [SerializeField] GameObject PartsSpawner;
+    [SerializeField] GameObject desc_panel;
+    
+
     void Start(){
         PlayerPrefs.SetInt("Score",0);
         score = PlayerPrefs.GetInt("Score",0);
         tScore.text = score.ToString();
+    }
+    public void OnStartGame(){
+        desc_panel.SetActive(false);
+        PartsSpawner.SetActive(true);
     }
     public void LeftClick(){
         if(transform.position.x > -1.5f){

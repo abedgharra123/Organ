@@ -109,6 +109,7 @@ public class Maps_Change : MonoBehaviour
     
     public void Math_Transform()
     {
+         PlayerPrefs.SetInt("Final_Exam", 1);
         SceneManager.LoadScene("Loading_bar");
 
     }

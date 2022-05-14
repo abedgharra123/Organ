@@ -18,32 +18,20 @@ MonoBehaviour:
   m_GUID: 9faef2bec63733a4eb7dd7bfba6de66d
   m_SerializeEntries:
   - m_GUID: 166f2db95b3801d4c8ff9afc8a05a222
-    m_Address: Arabic (ar)
+    m_Address: Arabic
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_mainAssetType: UnityEngine.Localization.Locale, Unity.Localization, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 9489e30d4093ec74a82c6e81453acb46
-    m_Address: English (en)
+    m_Address: English
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_mainAssetType: UnityEngine.Localization.Locale, Unity.Localization, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e119494543ea24142981e4b0cbac541a
-    m_Address: Hebrew (he)
+    m_Address: Hebrew
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
-    m_mainAssetType: UnityEngine.Localization.Locale, Unity.Localization, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a49713c471e52ef4da932f3ef1ab9462, type: 2}
   m_SchemaSet:

@@ -31,6 +31,7 @@ public class playerControllerInput : MonoBehaviour
     {
         if (col.collider.tag == "Games_Gate")
         {
+            AudioManager.instance.Play("Star_Field");
             Map.SetActive(false);
             Education_terrain.SetActive(false);
             Garden_Terrain.SetActive(true);
@@ -39,6 +40,7 @@ public class playerControllerInput : MonoBehaviour
         }
         if (col.collider.tag == "Back_Gate")
         {
+            AudioManager.instance.Stop("Star_Field");
             Garden_Terrain.SetActive(false);
             Map.SetActive(true);
             Education_terrain.SetActive(true);

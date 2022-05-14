@@ -7,10 +7,8 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "State")]
 public class State : ScriptableObject
 {
-   [SerializeField] string Title;
    [SerializeField] Sprite image;
-   [SerializeField] string url;
-   public string GetTitle(){return Title;}
+   [SerializeField] string[] url;
    public Sprite GetImage(){return image;}
-   public string GetURL(){return url;}
+   public string[] GetURL(){return url;}
 }

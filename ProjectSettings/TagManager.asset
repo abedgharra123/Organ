@@ -34,6 +34,7 @@ TagManager:
   - Heart_PickUp_History
   - Heart_PickUp_Math
   - Math
+  - Johann
   layers:
   - Default
   - TransparentFX

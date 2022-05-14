@@ -35,6 +35,9 @@ public class DoorsAndArrow : MonoBehaviour
         if (PlayerPrefs.GetInt("Johann", 0) == 1)
         {
             Arrow[3].SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Final_Exam", 0) == 1)
+        {
             Door[3].SetActive(false);
         }
     }
