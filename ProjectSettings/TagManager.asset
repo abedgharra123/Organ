@@ -35,10 +35,6 @@ TagManager:
   - Heart_PickUp_Math
   - Math
   - Johann
-  - History_door
-  - phy_door
-  - Johann_door
-  - Last_door
   layers:
   - Default
   - TransparentFX

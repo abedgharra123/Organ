@@ -19,16 +19,27 @@ MonoBehaviour:
   m_SerializeEntries:
   - m_GUID: 8ae0f6da180335d4dbc3f2f7b7e5ba1a
     m_Address: String_Words Shared Data
-    m_ReadOnly: 1
+    m_ReadOnly: 0
     m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ab2fa7e199cea3048992f718eae5ef43
     m_Address: History_Questions Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
+    m_mainAssetType: 
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: bcfd2bfd17aabe34a800eb51140ccf69
     m_Address: Images Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a49713c471e52ef4da932f3ef1ab9462, type: 2}
   m_SchemaSet:

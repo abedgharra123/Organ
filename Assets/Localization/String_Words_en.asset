@@ -128,47 +128,6 @@ MonoBehaviour:
     m_Localized: Get Out
     m_Metadata:
       m_Items: []
-  - m_Id: 49423897901969408
-    m_Localized: "you should play the Acoustics\n game in order to Unlock this door"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49424032186806272
-    m_Localized: "you should play the History\n game in order to Unlock this door"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49424062255771648
-    m_Localized: "you should learn the phythagoras \nmaterial inorder to unlock this
-      door"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49424227196776448
-    m_Localized: 'you should Finish the final exam
-
-
-'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49426148674547712
-    m_Localized: 'Click in your exams results to play '
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49429748964438016
-    m_Localized: Move left
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49429772855193600
-    m_Localized: Move right
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49429792346124288
-    m_Localized: In this game you have to go through the right frequency according
-      to the type of animal
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49430867975385088
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
   references:
     version: 1
     00000000:
