@@ -101,13 +101,68 @@ MonoBehaviour:
     m_Key: Lets play the Hestory game
     m_Metadata:
       m_Items: []
+  - m_Id: 17080321661849600
+    m_Key: 'his_msg
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080475747995648
+    m_Key: 'phy_msg
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080569109008384
+    m_Key: 'joh_msg
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080658544152576
+    m_Key: 'last_msg
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080714466807808
+    m_Key: 'check_exam
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080779864395776
+    m_Key: 'Move left
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080845635276800
+    m_Key: 'move right
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080920155475968
+    m_Key: 'endless_description1
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080978234003456
+    m_Key: 'endless_description2
+
+'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    id: 0
+    rid: 0
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
         m_CustomEpoch: 1648538926002

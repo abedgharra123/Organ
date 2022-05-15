@@ -12,7 +12,11 @@ public class GameOverHandler : MonoBehaviour
     private int Score;
 
     public void PlayAgain(){ SceneManager.LoadScene(2); }
-    public void BackToLearning(){ SceneManager.LoadScene(3); }
+    public void BackToLearning(){ 
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Main_Field");
+        SceneManager.LoadScene(3); 
+    }
 
     public void Awake(){
         score_txt.text =  PlayerPrefs.GetInt("Score", 0).ToString();

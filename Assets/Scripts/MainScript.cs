@@ -10,6 +10,8 @@ public class MainScript : MonoBehaviour
     public GameObject Setting_Panel;
     public GameObject Exit_Panel;
     public void StartButton(){
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene("Loading_bar");
     }
 
@@ -47,7 +49,8 @@ public class MainScript : MonoBehaviour
     /*Final game Func transform*/
     public void Final_Exam()
     {
-        AudioManager.instance.Play("Final_Game");
+
+        AudioManager.instance.StopAll();
         SceneManager.LoadScene("Final_Exam_Game");
     }
     

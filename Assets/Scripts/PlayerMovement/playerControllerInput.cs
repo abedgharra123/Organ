@@ -31,16 +31,18 @@ public class playerControllerInput : MonoBehaviour
     {
         if (col.collider.tag == "Games_Gate")
         {
+            AudioManager.instance.Stop("Main_Field");
             AudioManager.instance.Play("Star_Field");
             Map.SetActive(false);
             Education_terrain.SetActive(false);
             Garden_Terrain.SetActive(true);
-            transform.position = new Vector3(247.3617f, -0.0004883409f, 0.8558963f);
+            transform.position = new Vector3(7.939108f, -0.0004884005f, 0.03f);
             
         }
         if (col.collider.tag == "Back_Gate")
         {
             AudioManager.instance.Stop("Star_Field");
+            AudioManager.instance.Play("Main_Field");
             Garden_Terrain.SetActive(false);
             Map.SetActive(true);
             Education_terrain.SetActive(true);

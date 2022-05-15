@@ -142,6 +142,8 @@ public class History_Game : MonoBehaviour
     }
     public void Back_Home()
     {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene("Loading_bar");
 
     }

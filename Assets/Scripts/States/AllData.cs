@@ -52,7 +52,7 @@ public class AllData : MonoBehaviour
         image.sprite = states[index].GetImage();
     }
     public void ExitScenes(){
-        Clip.Play();
+        AudioManager.instance.Play("Main_Field");
         StatesUI.SetActive(false);
         PlayerField.SetActive(true);
     }
@@ -108,7 +108,7 @@ public class AllData : MonoBehaviour
         image.sprite = states[0].GetImage();
         index = 0;
         StatesUI.SetActive(true);
-        Clip.Pause();
+        AudioManager.instance.Pause("Main_Field");
     }
 
     private void YouTubeHandler(){

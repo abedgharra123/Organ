@@ -102,5 +102,56 @@ MonoBehaviour:
     m_Localized: Lets play the Hestory game
     m_Metadata:
       m_Items: []
+  - m_Id: 17080321661849600
+    m_Localized: "you should play the Acoustics\r game in order to Unlock this door"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080475747995648
+    m_Localized: 'you should play the History
+
+      game in order to Unlock this
+      door'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080569109008384
+    m_Localized: "you should learn the phythagoras \r\nmaterial inorder to unlock
+      this door"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080658544152576
+    m_Localized: 'you should Finish the final exam
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080714466807808
+    m_Localized: 'Click in your exams results to play
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080779864395776
+    m_Localized: 'Move left
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080845635276800
+    m_Localized: 'Move right
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080920155475968
+    m_Localized: "In this game you have to go through the correct \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17080978234003456
+    m_Localized: 'frequency according to the type of animal
+
+'
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

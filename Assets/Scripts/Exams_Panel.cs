@@ -18,6 +18,11 @@ public class Exams_Panel : MonoBehaviour
         Final_exam_panel();
     }
 
+    void Update()
+    {
+        Final_exam_panel();
+    }
+
     public void Acoustics_result()
     {
         int score = ScoreHandler.GetScore(1);
@@ -86,7 +91,7 @@ public class Exams_Panel : MonoBehaviour
 
     public void Final_exam_panel()
     {
-        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85 && PlayerPrefs.GetInt("Pythagoras", 0) ==1 && PlayerPrefs.GetInt("Johann", 0)==1)
+        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85 && PlayerPrefs.GetInt("Pythagoras", 0) !=0 && PlayerPrefs.GetInt("Johann", 0)!=0)
         {
             Final_exam.SetActive(true);
         }
