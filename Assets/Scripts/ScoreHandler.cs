@@ -20,6 +20,7 @@ public class ScoreHandler
         Pythagoras = PlayerPrefs.GetInt("Pythagoras", 0);
         Johann = PlayerPrefs.GetInt("Johann", 0);
         Final = PlayerPrefs.GetInt("Final_Exam", 0);
+        PlayerPrefs.GetInt("Red_Carpet", 0);
     }
 
     public static void SetScore(int index, int value)

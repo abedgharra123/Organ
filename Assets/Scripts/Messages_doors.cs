@@ -6,6 +6,16 @@ public class Messages_doors : MonoBehaviour
 {
    
     public GameObject[] messages;
+    public GameObject red_carpet;
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("Red_Carpet", 0) == 1)
+        {
+            red_carpet.SetActive(true);
+        }
+        
+    }
     private void OnCollisionEnter(Collision col)
     {
         if (col.collider.tag == "History_door")

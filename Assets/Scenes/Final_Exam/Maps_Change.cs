@@ -109,7 +109,8 @@ public class Maps_Change : MonoBehaviour
     
     public void Math_Transform()
     {
-         PlayerPrefs.SetInt("Final_Exam", 1);
+        PlayerPrefs.SetInt("Red_Carpet", 1);
+        PlayerPrefs.SetInt("Final_Exam", 1);
          AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene("Loading_bar");
 
