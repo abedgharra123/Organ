@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Exams_Panel : MonoBehaviour
 {
@@ -55,7 +57,8 @@ public class Exams_Panel : MonoBehaviour
             acoustics_exam[2].SetActive(false);
             acoustics_exam[3].SetActive(false);
         }
-    }public void History_result()
+    }
+    public void History_result()
     {
         int score = ScoreHandler.GetScore(2);
         if (score > 85)
@@ -91,7 +94,7 @@ public class Exams_Panel : MonoBehaviour
 
     public void Final_exam_panel()
     {
-        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85 && PlayerPrefs.GetInt("Pythagoras", 0) !=0 && PlayerPrefs.GetInt("Johann", 0)!=0)
+        if (ScoreHandler.GetScore(1) > 12 && ScoreHandler.GetScore(2) > 85 && PlayerPrefs.GetInt("Pythagoras", 0) != 0 && PlayerPrefs.GetInt("Johann", 0) != 0)
         {
             Final_exam.SetActive(true);
         }
@@ -100,5 +103,17 @@ public class Exams_Panel : MonoBehaviour
             Final_exam.SetActive(false);
 
         }
+    }
+
+    public void Acoustics_Game()
+    {
+        AudioManager.instance.Pause("Main_Field");
+        SceneManager.LoadScene(2);
+
+    }
+    public void history_Game()
+    {
+        AudioManager.instance.Pause("Main_Field");
+        SceneManager.LoadScene(6);
     }
 }

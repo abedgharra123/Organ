@@ -99,11 +99,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22504154116096
-    m_Localized: Lets play the Hestory game
+    m_Localized: Lets play the History game
     m_Metadata:
       m_Items: []
   - m_Id: 17080321661849600
-    m_Localized: "you should play the Acoustics\r game in order to Unlock this door"
+    m_Localized: "you should play the Acoustics\n\r game in order to Unlock this
+      door"
     m_Metadata:
       m_Items: []
   - m_Id: 17080475747995648
