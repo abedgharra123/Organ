@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10767078771",
+    "project_id": "pipe-organ-372bf",
+    "storage_bucket": "pipe-organ-372bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10767078771:android:19bd18f4683a33fab12106",
+        "android_client_info": {
+          "package_name": "com.SCE.PipeOrgan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10767078771-ep00jl0rkbpuvbl9t2ru7nv7p08git4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCwdk0Ids2T6TQfReCnJuyx4e1RkXeUxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10767078771-ep00jl0rkbpuvbl9t2ru7nv7p08git4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
