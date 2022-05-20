@@ -18,12 +18,15 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         int index = PlayerPrefs.GetInt("IsCharacterPicked",0);
-        if(index == 1){ // boy
+       if(index == 1){ // boy
             Main_Canvas.SetActive(true);
             Camera.main.transform.rotation = new Quaternion(0,0,0,0);
             Boy.SetActive(true);
             Map.SetActive(true);
-            Boy.transform.position = playerControllerInput.LastPosition;
+            if(PlayerPrefs.GetInt("Red_Carpet",0)==0)
+                Boy.transform.position = playerControllerInput.LastPosition;
+            else
+                Boy.transform.position = new Vector3(10.99682f,2.69f,-13.04536f);
             Destroy(pipe);
         }
         else if(index == 2){ // girl
@@ -31,7 +34,10 @@ public class UI_Manager : MonoBehaviour
             Camera.main.transform.rotation = new Quaternion(0,0,0,0);
             Girl.SetActive(true);
             Map.SetActive(true);
-            Girl.transform.position = playerControllerInput.LastPosition;
+            if(PlayerPrefs.GetInt("Red_Carpet",0)==0)
+                Girl.transform.position = playerControllerInput.LastPosition;
+            else
+                Girl.transform.position = new Vector3(10.99682f,2.69f,-13.04536f);
             Destroy(pipe);
         }
         else { // first game openning

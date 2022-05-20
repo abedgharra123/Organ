@@ -119,26 +119,33 @@ public class AllData : MonoBehaviour
         if(states[index].GetURL().Length > 0){
             if( states[index].GetURL().Length == 3){
                 YouTube[0].SetActive(true);
-                YouTube[0].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
+                YouTube[0].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[0].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[0]));
 
                 YouTube[1].SetActive(true);
-                YouTube[1].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[1]); });
+                YouTube[1].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[1].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[1]));
 
                 YouTube[2].SetActive(true);
-                YouTube[2].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[2]); });
+                YouTube[2].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[2].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[2]));
             }
             else if(states[index].GetURL().Length == 2){
                 YouTube[0].SetActive(true);
-                YouTube[0].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
+                YouTube[0].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[0].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[0]));
 
                 YouTube[2].SetActive(true);
-                YouTube[2].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[1]); });
+                YouTube[2].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[2].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[1]));
             }
             else if(states[index].GetURL() != null && states[index].GetURL()[0] != "" && states[index].GetURL()[0] != string.Empty){
                 YouTube[1].SetActive(true);
-                YouTube[1].GetComponent<Button>().onClick.AddListener(delegate { HyperLink.OpenURL(states[index].GetURL()[0]); });
+                YouTube[1].GetComponent<Button>().onClick.RemoveAllListeners();
+                YouTube[1].GetComponent<Button>().onClick.AddListener(() => HyperLink.OpenURL(states[index].GetURL()[0]));
             } 
         }
+
     }
 }
 

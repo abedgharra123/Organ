@@ -20,6 +20,7 @@ public class GoogleSignInDemo : MonoBehaviour
     {
         configuration = new GoogleSignInConfiguration { WebClientId = webClientId, RequestEmail = true, RequestIdToken = true };
         CheckFirebaseDependencies();
+        SignInWithGoogle();
     }
 
     private void CheckFirebaseDependencies()
