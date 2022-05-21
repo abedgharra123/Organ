@@ -4,6 +4,8 @@ using System;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Proyecto26;
+
 
 public class Maps_Change : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Maps_Change : MonoBehaviour
     public GameObject Math_Map;
     public GameObject Brocken_Heart;
     public GameObject Heart_PickUp;
+    public int count_mistakes;
     public GameObject Star;
     public AudioClip[] sound;
     public Material[] sky_Box;
@@ -25,6 +28,7 @@ public class Maps_Change : MonoBehaviour
 
     void Start()
     {
+        count_mistakes = 0;
         for (int i = 1; i < Questions.Length; i++)
         {
             Questions[i].SetActive(false);
@@ -40,7 +44,7 @@ public class Maps_Change : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        
+
         if (col.collider.tag == "History_Transform")
         {
             Invoke("History_Transform", 1);
@@ -50,11 +54,11 @@ public class Maps_Change : MonoBehaviour
             Invoke("Math_Transform", 1);
 
         }
-        
+
         if (col.collider.tag == "Correct_Answer")
         {
             Star.SetActive(true);
-            AudioSource.PlayClipAtPoint(sound[0],col.transform.position);
+            AudioSource.PlayClipAtPoint(sound[0], col.transform.position);
             Invoke("Correct_Answer", 1);
             Destroy(col.gameObject);
 
@@ -84,11 +88,11 @@ public class Maps_Change : MonoBehaviour
             if (heart_amount < 3)
             {
                 heart_amount++;
-                Hearts[heart_amount-1].SetActive(true);
+                Hearts[heart_amount - 1].SetActive(true);
             }
             Heart_PickUp.SetActive(true);
             Invoke("Increase_Life", 1);
-            Destroy(col.gameObject);    
+            Destroy(col.gameObject);
         }
 
 
@@ -97,21 +101,24 @@ public class Maps_Change : MonoBehaviour
 
     }
 
-    
+
     public void History_Transform()
     {
         Math_Map.SetActive(true);
         transform.position = new Vector3(3, 21, 102.32f);
         RenderSettings.skybox = sky_Box[1];
         History_Map.SetActive(false);
-        
+
     }
-    
+
     public void Math_Transform()
     {
         PlayerPrefs.SetInt("Red_Carpet", 1);
         PlayerPrefs.SetInt("Final_Exam", 1);
-         AudioManager.instance.Play("Main_Field");
+        PlayerPrefs.SetString("Final_Exam_Result", count_mistakes.ToString() + " Mistakes");
+        Sign_in.p.final_game_result = count_mistakes.ToString() + " Mistakes";
+        RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
+        AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene("Loading_bar");
 
     }
@@ -123,11 +130,12 @@ public class Maps_Change : MonoBehaviour
     }
     public void Wrong_Answer()
     {
+        count_mistakes++;
         Brocken_Heart.SetActive(false);
-        
-        if(Count_question+1 != Questions.Length)
+
+        if (Count_question + 1 != Questions.Length)
             Questions[++Count_question].SetActive(true);
-        
+
         if (heart_amount == 0)
         {
             Movenment_btns.SetActive(false);
@@ -137,7 +145,7 @@ public class Maps_Change : MonoBehaviour
     }
     public void Increase_Life()
     {
-            Heart_PickUp.SetActive(false);
+        Heart_PickUp.SetActive(false);
     }
 
 

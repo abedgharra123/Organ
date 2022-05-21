@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Proyecto26;
 
 public class History_Game : MonoBehaviour
 {
@@ -35,9 +36,9 @@ public class History_Game : MonoBehaviour
         Game_end_Panel.SetActive(false);
 
     }
-    private void OnCollisionEnter(Collision col) 
+    private void OnCollisionEnter(Collision col)
     {
-        if (col.collider.tag == "Correct_Answer" && col.gameObject.GetComponent<Renderer>().material.color!=Color.green)
+        if (col.collider.tag == "Correct_Answer" && col.gameObject.GetComponent<Renderer>().material.color != Color.green)
         {
             Smily_Effect.SetActive(true);
             col.gameObject.GetComponent<Renderer>().material.color = Color.green;
@@ -76,26 +77,28 @@ public class History_Game : MonoBehaviour
 
             }
         }
-            if (col.collider.tag == "Wrong_Answer" && col.gameObject.GetComponent<Renderer>().material.color != Color.red)
+        if (col.collider.tag == "Wrong_Answer" && col.gameObject.GetComponent<Renderer>().material.color != Color.red)
         {
             history_score -= 2;
             col.gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
-        
+
     }
-    
+
     public void Next_Level()
     {
         History_Levels[level_num].SetActive(false);
         transform.position = new Vector3(5.13f, 0.06f, 5.26f);
         History_Levels[++level_num].SetActive(true);
-        Invoke("Delay",2f);
+        Invoke("Delay", 2f);
     }
-   
+
     public void Game_End_Panel()
     {
-        if(history_score > PlayerPrefs. GetInt("Score_2", 0))
+        if (history_score > PlayerPrefs.GetInt("Score_2", 0))
             PlayerPrefs.SetInt("Score_2", history_score);
+        Sign_in.p.history_game_result = history_score;
+        RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
         History_Levels[level_num].SetActive(false);
         Playey_Movenment.SetActive(false);
         if (history_score > 85)

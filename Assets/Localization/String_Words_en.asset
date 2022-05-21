@@ -17,8 +17,8 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 8ae0f6da180335d4dbc3f2f7b7e5ba1a, type: 2}
   m_Metadata:
     m_Items:
-    - id: 0
-    - id: 1
+    - rid: 0
+    - rid: 1
   m_TableData:
   - m_Id: 75252862976
     m_Localized: Start
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Localized: Johann Sebastian Bach
     m_Metadata:
       m_Items:
-      - id: 1
+      - rid: 1
   - m_Id: 1785065938587648
     m_Localized: Play again
     m_Metadata:
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Localized: "Welcome to Organ!\n\nlook back and have fun\n playing and learning"
     m_Metadata:
       m_Items:
-      - id: 0
+      - rid: 0
   - m_Id: 30058413461123072
     m_Localized: Movement
     m_Metadata:
@@ -128,13 +128,22 @@ MonoBehaviour:
     m_Localized: Get Out
     m_Metadata:
       m_Items: []
+  - m_Id: 51823613173764096
+    m_Localized: Enter your name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51824346929500160
+    m_Localized: Username
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries: 00606fa54de95000
-    00000001:
+    - rid: 1
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries: 00902b6d87480600

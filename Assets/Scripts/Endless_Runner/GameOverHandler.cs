@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Proyecto26;
 
 
 public class GameOverHandler : MonoBehaviour
@@ -17,6 +18,7 @@ public class GameOverHandler : MonoBehaviour
         AudioManager.instance.StopAll();
         AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene(3);
+
     }
 
     public void Awake()
@@ -24,6 +26,10 @@ public class GameOverHandler : MonoBehaviour
 
         score_txt.text = PlayerPrefs.GetInt("Score", 0).ToString();
         Score = PlayerPrefs.GetInt("Score", 0);
+        Sign_in.p.sound_game_result = (int)(Score * (100f / 15f));
+        Debug.Log(Sign_in.p.username);
+        Debug.Log(Sign_in.p.sound_game_result);
+        RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
         if (Score > 12)
         {
             score_txt.color = Color.green;

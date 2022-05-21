@@ -27,10 +27,10 @@ public class GoogleSignInDemo : MonoBehaviour
         // p = new Player();
         //p.username = "asd";
         //p.Id = "a";
-        FindObjectOfType<DBHandler>().PostToDatabase(p);
+        // FindObjectOfType<DBHandler>().PostToDatabase(p);
         configuration = new GoogleSignInConfiguration { WebClientId = webClientId, RequestEmail = true, RequestIdToken = true };
         CheckFirebaseDependencies();
-        SignInWithGoogle();
+        //  SignInWithGoogle();
 
     }
 

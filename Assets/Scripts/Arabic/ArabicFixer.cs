@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
+[ExecuteInEditMode]
 public class ArabicFixer : MonoBehaviour
 {
     public string fixedText;

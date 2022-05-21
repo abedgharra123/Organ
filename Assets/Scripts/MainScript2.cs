@@ -37,6 +37,7 @@ public class MainScript2 : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         close_delete_data_panel();
+
     }
     public void close_delete_data_panel()
     {
