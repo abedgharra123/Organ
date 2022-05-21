@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainScript : MonoBehaviour
+public class MainScript2 : MonoBehaviour
 {
     public GameObject Exams_Panel;
     public GameObject Clear_Data_panel;

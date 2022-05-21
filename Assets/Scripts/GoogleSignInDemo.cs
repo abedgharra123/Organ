@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,10 +8,15 @@ using Firebase.Auth;
 using Google;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class GoogleSignInDemo : MonoBehaviour
 {
     public Text infoText;
+
+    public Image Google_Img;
+
+    public Player p;
     private string webClientId = "10767078771-ep00jl0rkbpuvbl9t2ru7nv7p08git4g.apps.googleusercontent.com";
 
     private FirebaseAuth auth;
@@ -18,9 +24,14 @@ public class GoogleSignInDemo : MonoBehaviour
 
     private void Awake()
     {
+        // p = new Player();
+        //p.username = "asd";
+        //p.Id = "a";
+        FindObjectOfType<DBHandler>().PostToDatabase(p);
         configuration = new GoogleSignInConfiguration { WebClientId = webClientId, RequestEmail = true, RequestIdToken = true };
         CheckFirebaseDependencies();
         SignInWithGoogle();
+
     }
 
     private void CheckFirebaseDependencies()
@@ -89,11 +100,20 @@ public class GoogleSignInDemo : MonoBehaviour
         }
         else
         {
+
             AddToInformation("Welcome: " + task.Result.DisplayName + "!");
             AddToInformation("Email = " + task.Result.Email);
             AddToInformation("Google ID Token = " + task.Result.IdToken);
             AddToInformation("Email = " + task.Result.Email);
+            PlayerPrefs.SetString("Username", task.Result.DisplayName);
+            PlayerPrefs.SetString("Id", task.Result.IdToken);
+            yourMethodHome(task.Result.ImageUrl);
+            p = new Player();
+            p.username = task.Result.DisplayName;
+            p.Id = task.Result.IdToken;
+            FindObjectOfType<DBHandler>().PostToDatabase(p);
             SignInWithGoogleOnFirebase(task.Result.IdToken);
+
         }
     }
 
@@ -138,4 +158,33 @@ public class GoogleSignInDemo : MonoBehaviour
     }
 
     private void AddToInformation(string str) { infoText.text += "\n" + str; }
+
+
+    /*Google account image*/
+
+    void yourMethodHome(System.Uri uri)
+    {
+        string YourImg = uri.ToString();
+        StartCoroutine(DownloadImage(YourImg));
+    }
+    IEnumerator DownloadImage(string MediaUrl)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError || request.isHttpError)
+            Debug.Log(request.error);
+        else
+        {
+            Texture2D webTexture = ((DownloadHandlerTexture)request.downloadHandler).texture as Texture2D;
+            Sprite webSprite = SpriteFromTexture2D(webTexture);
+
+            Google_Img.GetComponent<Image>().sprite = webSprite;
+
+        }
+    }
+
+    Sprite SpriteFromTexture2D(Texture2D texture)
+    {
+        return Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+    }
 }
