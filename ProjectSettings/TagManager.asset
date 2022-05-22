@@ -39,6 +39,11 @@ TagManager:
   - phy_door
   - Johann_door
   - Last_door
+  - sound_chat
+  - history_chat
+  - phytagoras_chat
+  - johann_chat
+  - ground_map
   layers:
   - Default
   - TransparentFX
