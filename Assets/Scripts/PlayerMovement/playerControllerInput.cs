@@ -21,7 +21,7 @@ public class playerControllerInput : MonoBehaviour
     public GameObject Garden_Terrain;
     public GameObject Map;
     public GameObject red_carpet;
-    public static Vector3 LastPosition = new Vector3(11, 4, -13);
+    public static Vector3 LastPosition = new Vector3(11.3094f, 2.69f, 44.726f);
 
     // Use this for initialization
     void Start()
@@ -54,7 +54,7 @@ public class playerControllerInput : MonoBehaviour
         {
             Map.SetActive(true);
             Education_terrain.SetActive(true);
-            transform.position = new Vector3(10.73f, 2.686022f, -10.9f);
+            transform.position = new Vector3(11.3094f, 2.69f, 44.726f);
             Destroy(pipe);
         }
         // if (col.collider.tag == "start_pipe")
