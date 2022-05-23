@@ -12,7 +12,7 @@ public class playerControllerInput : MonoBehaviour
     public FixedTouchField TouchField;
     protected ThirdPersonUserControl Control;
 
-    protected float CameraAngle ;
+    protected float CameraAngle;
     protected float CameraAngleSpeed = 0.2f;
     protected float CameraPosSpeed = 0.005f;
     protected float CameraPosY;
@@ -21,8 +21,8 @@ public class playerControllerInput : MonoBehaviour
     public GameObject Garden_Terrain;
     public GameObject Map;
     public GameObject red_carpet;
-    public static Vector3 LastPosition = new Vector3(11,4,-13);
-   
+    public static Vector3 LastPosition = new Vector3(11, 4, -13);
+
     // Use this for initialization
     void Start()
     {
@@ -37,8 +37,8 @@ public class playerControllerInput : MonoBehaviour
             Map.SetActive(false);
             Education_terrain.SetActive(false);
             Garden_Terrain.SetActive(true);
-            transform.position = new Vector3(7.939108f, -0.0004884005f, 0.03f);
-            
+            transform.position = new Vector3(8.628734f, 0.4995116f, 50.25478f);
+
         }
         if (col.collider.tag == "Back_Gate")
         {
@@ -47,7 +47,7 @@ public class playerControllerInput : MonoBehaviour
             Garden_Terrain.SetActive(false);
             Map.SetActive(true);
             Education_terrain.SetActive(true);
-            transform.position = new Vector3(11.22312f, 3.285831f, 41.65334f);
+            transform.position = new Vector3(11.5845f, 3.285831f, -13.39684f);
 
         }
         if (col.collider.tag == "pipe_end")
@@ -79,7 +79,7 @@ public class playerControllerInput : MonoBehaviour
 
     }
 
-    
 
-   
+
+
 }

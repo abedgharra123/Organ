@@ -14,7 +14,7 @@ public class Manage_charachters_chats : MonoBehaviour
         {
             sound_chat1.SetActive(true);
         }
-        else
+        else if (col.collider.tag == "history_chat" || col.collider.tag == "phytagoras_chat" || col.collider.tag == "johann_chat")
         {
             sound_chat1.SetActive(false);
 
@@ -24,7 +24,7 @@ public class Manage_charachters_chats : MonoBehaviour
         {
             history_chat2.SetActive(true);
         }
-        else
+        else if (col.collider.tag == "sound_chat" || col.collider.tag == "phytagoras_chat" || col.collider.tag == "johann_chat")
         {
             history_chat2.SetActive(false);
 
@@ -36,7 +36,7 @@ public class Manage_charachters_chats : MonoBehaviour
         {
             phytagoras_chat3.SetActive(true);
         }
-        else
+        else if (col.collider.tag == "history_chat" || col.collider.tag == "sound_chat" || col.collider.tag == "johann_chat")
         {
             phytagoras_chat3.SetActive(false);
         }
@@ -45,7 +45,7 @@ public class Manage_charachters_chats : MonoBehaviour
         {
             johann_chat4.SetActive(true);
         }
-        else
+        else if (col.collider.tag == "sound_chat" || col.collider.tag == "phytagoras_chat" || col.collider.tag == "history_chat")
         {
             johann_chat4.SetActive(false);
         }
