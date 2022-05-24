@@ -97,7 +97,13 @@ public class History_Game : MonoBehaviour
     {
         if (history_score > PlayerPrefs.GetInt("Score_2", 0))
             PlayerPrefs.SetInt("Score_2", history_score);
-        Sign_in.p.history_game_result = history_score;
+
+        Sign_in.p.history_game_result.Add(history_score);
+
+        PlayerPrefs.SetInt("History_Result" + (Sign_in.p.history_game_result.Count), history_score);
+
+        PlayerPrefs.SetInt("count_his_times", Sign_in.p.history_game_result.Count);
+
         RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
         History_Levels[level_num].SetActive(false);
         Playey_Movenment.SetActive(false);

@@ -116,7 +116,15 @@ public class Maps_Change : MonoBehaviour
         PlayerPrefs.SetInt("Red_Carpet", 1);
         PlayerPrefs.SetInt("Final_Exam", 1);
         PlayerPrefs.SetString("Final_Exam_Result", count_mistakes.ToString() + " Mistakes");
-        Sign_in.p.final_game_result = count_mistakes.ToString() + " Mistakes";
+
+
+        Sign_in.p.final_game_result.Add(count_mistakes.ToString() + " Mistakes");
+
+        PlayerPrefs.SetString("final_Result" + (Sign_in.p.final_game_result.Count), count_mistakes.ToString() + " Mistakes");
+
+        PlayerPrefs.SetInt("count_final_times", Sign_in.p.final_game_result.Count);
+
+
         RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
         AudioManager.instance.Play("Main_Field");
         SceneManager.LoadScene("Loading_bar");
@@ -140,6 +148,13 @@ public class Maps_Change : MonoBehaviour
         {
             Movenment_btns.SetActive(false);
             Game_Player.SetActive(false);
+            Sign_in.p.final_game_result.Add("Not Passed");
+
+            PlayerPrefs.SetString("final_Result" + (Sign_in.p.final_game_result.Count), "Not Passed");
+
+            PlayerPrefs.SetInt("count_final_times", Sign_in.p.final_game_result.Count);
+            RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
+
             Restart_Game_Panel.SetActive(true);
         }
     }

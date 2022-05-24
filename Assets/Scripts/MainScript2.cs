@@ -36,9 +36,9 @@ public class MainScript2 : MonoBehaviour
     public void Delete_Data_Button()
     {
         PlayerPrefs.DeleteAll();
-        Sign_in.p.sound_game_result = 0;
-        Sign_in.p.history_game_result = 0;
-        Sign_in.p.final_game_result = "Not passed yet";
+        Sign_in.p.sound_game_result = null;
+        Sign_in.p.history_game_result = null;
+        Sign_in.p.final_game_result = null;
         close_delete_data_panel();
 
     }

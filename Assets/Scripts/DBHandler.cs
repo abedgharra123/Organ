@@ -11,7 +11,6 @@ public class DBHandler : MonoBehaviour
     public void PostToDatabase(Player p)
     {
         RestClient.Post(firebase_url + p.username + ".json", p);
-
     }
 
 }

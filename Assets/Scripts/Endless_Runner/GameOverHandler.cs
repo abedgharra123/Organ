@@ -23,12 +23,25 @@ public class GameOverHandler : MonoBehaviour
 
     public void Awake()
     {
-
         score_txt.text = PlayerPrefs.GetInt("Score", 0).ToString();
         Score = PlayerPrefs.GetInt("Score", 0);
-        Sign_in.p.sound_game_result = (int)(Score * (100f / 15f));
+        if (Score == 15)
+        {
+            Sign_in.p.sound_game_result.Add((int)(Score * (100f / 15f) + 1));
+            PlayerPrefs.SetInt("Sound_Result" + (Sign_in.p.sound_game_result.Count), (int)(Score * (100f / 15f) + 1));
+
+        }
+        else
+        {
+
+            Sign_in.p.sound_game_result.Add((int)(Score * (100f / 15f)));
+            PlayerPrefs.SetInt("Sound_Result" + (Sign_in.p.sound_game_result.Count), (int)(Score * (100f / 15f)));
+
+        }
+        PlayerPrefs.SetInt("count_Sound_times", Sign_in.p.sound_game_result.Count);
+
         Debug.Log(Sign_in.p.username);
-        Debug.Log(Sign_in.p.sound_game_result);
+        Debug.Log(Sign_in.p.sound_game_result.Count);
         RestClient.Put("https://pipe-organ-372bf-default-rtdb.firebaseio.com/" + Sign_in.p.username + ".json", Sign_in.p);
         if (Score > 12)
         {
