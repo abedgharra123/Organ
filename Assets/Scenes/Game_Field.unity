@@ -22272,8 +22272,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757878106}
-  m_LocalRotation: {x: -0.13182653, y: 0.03777862, z: 0.005091525, w: 0.99053955}
-  m_LocalPosition: {x: 13.319483, y: -8.111065, z: 8.385035}
+  m_LocalRotation: {x: 0.1247037, y: 0.5815892, z: 0.09068864, w: -0.7987356}
+  m_LocalPosition: {x: 31.468441, y: -9.469892, z: 16.88905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32905,45 +32905,9 @@ MonoBehaviour:
   StatesUI: {fileID: 1644657317}
   PlayerField: {fileID: 2033852111}
   BrainStates:
-  - {fileID: 11400000, guid: 5e63854433c4d314b93fec5b5273bde0, type: 2}
-  - {fileID: 11400000, guid: c80d0a2719a9c0142930763f6531e50a, type: 2}
-  - {fileID: 11400000, guid: 35e8e019bb5e18c4eaafba931c005f0a, type: 2}
-  - {fileID: 11400000, guid: da4c8ff7be69c754b95eb3f74044edbc, type: 2}
-  - {fileID: 11400000, guid: 97839ebe10fbafc459f6ad51f96a913f, type: 2}
-  - {fileID: 11400000, guid: b558a968adee0fc42859360a6bf0486e, type: 2}
-  - {fileID: 11400000, guid: be8bab73ac1953441853109930f43fef, type: 2}
-  - {fileID: 11400000, guid: d7f5054b3c0b3a64da7cfd693a706edd, type: 2}
-  - {fileID: 11400000, guid: ced8e82b757166a44a94049fefb7b58e, type: 2}
-  - {fileID: 11400000, guid: b5fff3e0484eb2142bd87ab5a91c5431, type: 2}
-  - {fileID: 11400000, guid: 9f8205ba6db1d8641b3bdb3d4fb4056f, type: 2}
-  - {fileID: 11400000, guid: 2c22245c2c67faa42b12fc2d30bd5df6, type: 2}
-  - {fileID: 11400000, guid: 84d755d06051a4041a3cdec039ab7006, type: 2}
-  - {fileID: 11400000, guid: 5a1e3f9fe8831f04c90e353c3bb338da, type: 2}
-  - {fileID: 11400000, guid: 61b82d89ace73af4c87a02de9cf22795, type: 2}
-  - {fileID: 11400000, guid: bb4d585567a5f3f41bb0a47491541e3d, type: 2}
-  - {fileID: 11400000, guid: 1b677d29534166e4f975863bdd3f2658, type: 2}
-  - {fileID: 11400000, guid: 2ee722ea3e575f8479b6c746372d8264, type: 2}
-  - {fileID: 11400000, guid: 0eedb8411364ecc41b3232a1124536e8, type: 2}
-  - {fileID: 11400000, guid: 3d3107e6226db1449936fc0b018990ad, type: 2}
-  - {fileID: 11400000, guid: 06212f2849595fa4fae2f5042ca7f401, type: 2}
-  - {fileID: 11400000, guid: 2c110feec0df8be48b37640fbb8fa2a5, type: 2}
-  - {fileID: 11400000, guid: 1f6ca8dbf342c37498762777fb3af205, type: 2}
-  - {fileID: 11400000, guid: 7d679b000b92cb04ba1c04c5ba0beef5, type: 2}
-  - {fileID: 11400000, guid: 1ed3ffb4c876ec340a09379d27bc78b3, type: 2}
-  - {fileID: 11400000, guid: e992c7186e2c415468d75ac018393bc2, type: 2}
-  - {fileID: 11400000, guid: b9a904e7352d7c643812434cbbc60c02, type: 2}
-  - {fileID: 11400000, guid: fdd4a69af5f7cc540b4a88f4990fc4d8, type: 2}
+  - {fileID: 11400000, guid: 3503c994b2f9ddf4f91d5db0067eb6da, type: 2}
   HistoryStates:
-  - {fileID: 11400000, guid: 889d7bbe1381e0f418c1c62f534df4fb, type: 2}
-  - {fileID: 11400000, guid: 9cb199532896a1540a5ffea110345645, type: 2}
-  - {fileID: 11400000, guid: 89a8ab44e1f15bf4b8c1b93a5911607a, type: 2}
-  - {fileID: 11400000, guid: b73824a2cb26721478d8bfbdd1272da4, type: 2}
-  - {fileID: 11400000, guid: 99e0c2c555926d749ae8e846b81b4e8a, type: 2}
-  - {fileID: 11400000, guid: 56ab8641006b1854d9a83bff2f71949b, type: 2}
-  - {fileID: 11400000, guid: a5782fd461797b04c85da1ba43ed4bde, type: 2}
-  - {fileID: 11400000, guid: 4b9ba0a7970342d4fb5788c3b3af5110, type: 2}
-  - {fileID: 11400000, guid: d10ff72ece9603347abddb0400895290, type: 2}
-  - {fileID: 11400000, guid: 113ce7a8a9b98a948af4e1432d7bf903, type: 2}
+  - {fileID: 11400000, guid: a828311407f5f7b4d81a73250b38812c, type: 2}
   MathStates:
   - {fileID: 11400000, guid: 88664112d02c0c84287f6836f3221a27, type: 2}
   - {fileID: 11400000, guid: 81be19a8c3092d440b9dc1f828b394b0, type: 2}
